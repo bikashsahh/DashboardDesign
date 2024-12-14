@@ -80,7 +80,7 @@ export default function App() {
 
   return (
     <Box p={5}>
-      <ProgressBar steps={steps} currentStep={5} />
+      <ProgressBar steps={steps} currentStep={3} />
     </Box>
   );
 }
