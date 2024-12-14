@@ -27,10 +27,10 @@ const YourDetails = () => {
       {/* Image */}
       <Box
         component="img"
-        src="/law.jpg" // Fallback to placeholder if no imageSrc
+        src="/construction.webp" // Fallback to placeholder if no imageSrc
         alt="Dummy Page"
         sx={{
-          width: "300px",
+          width: "40%",
           height: "auto",
           borderRadius: "8px",
           boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
