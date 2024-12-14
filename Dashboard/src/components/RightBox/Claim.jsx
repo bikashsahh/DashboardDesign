@@ -2,13 +2,13 @@ import * as React from "react";
 import CssBaseline from "@mui/material/CssBaseline";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
-import Heading from "./claim/Heading";
-import ClaimValue from "./claim/ClaimValue";
-import Place from "./claim/Place";
-import Language from "./claim/Language";
-import Statement from "./claim/Statement";
-import AgreementUnderDisputes from "./claim/AgreementUnderDisputes";
-import AdditionalDocumentation from "./claim/AdditionalDocumentation";
+import Heading from "./TasksContainer/Heading";
+import ClaimValue from "./TasksContainer/ClaimValue";
+import Place from "./TasksContainer/Place";
+import Language from "./TasksContainer/Language";
+import Statement from "./TasksContainer/Statement";
+import AgreementUnderDisputes from "./TasksContainer/AgreementUnderDisputes";
+import AdditionalDocumentation from "./TasksContainer/AdditionalDocumentation";
 
 export default function Claim() {
   return (
