@@ -1,8 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import { Box, Typography } from "@mui/material";
-import StepLine from "../UI/StepLine";
+import StepLine from "../commonPages/StepLine"; // Ensure StepLine is implemented correctly
+import { useNavigate } from "react-router-dom";
 
-const ProgressBar = ({ steps, currentStep }) => {
+const ProgressBar = ({ steps, initialStep }) => {
+  const [currentStep, setCurrentStep] = useState(initialStep); // Initialize currentStep with the prop
+  const navigate = useNavigate();
+
+  const handleStepClick = (index) => {
+    setCurrentStep(index); // Update the current step
+    console.log(`Navigating to Step ${index + 1}`);
+    if (index == 0) navigate("/preliminary");
+    else if (index == 1) navigate("/yourdetails");
+    else if (index == 2) navigate("/kyc");
+    else if (index == 3) navigate("/parties");
+    else if (index == 5) navigate("/review");
+    else if (index == 6) navigate("/payment");
+    else navigate("/");
+  };
+
   return (
     <Box
       display="flex"
@@ -22,10 +38,14 @@ const ProgressBar = ({ steps, currentStep }) => {
           <Box
             key={index}
             display="flex"
-            flexDirection={"column"}
+            flexDirection="column"
             alignItems="center"
             justifyContent="center"
             flex={1}
+            onClick={() => handleStepClick(index)} // Navigate on click
+            sx={{
+              cursor: "pointer", // Pointer cursor for interactivity
+            }}
           >
             {/* Step Number */}
             <Box
@@ -36,10 +56,9 @@ const ProgressBar = ({ steps, currentStep }) => {
                 alignItems: "center",
               }}
             >
-              <Typography fontWeight={"bold"} fontSize={"22px"} mr={1}>
+              <Typography fontWeight="bold" fontSize="22px" mr={1}>
                 0{index + 1}
               </Typography>
-
               <Typography
                 variant="body2"
                 fontWeight={isActive ? "bold" : "normal"}
@@ -51,6 +70,10 @@ const ProgressBar = ({ steps, currentStep }) => {
                 {step.label}
               </Typography>
             </Box>
+
+
+            
+            
             <Box
               sx={{
                 display: "flex",
@@ -162,7 +185,8 @@ export default function App() {
 
   return (
     <Box p={3}>
-      <ProgressBar steps={steps} currentStep={4} />
+      <ProgressBar steps={steps} initialStep={4} />{" "}
+      {/* Pass initial step as prop */}
     </Box>
   );
 }

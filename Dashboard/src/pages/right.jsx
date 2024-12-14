@@ -1,8 +1,15 @@
 import React from "react";
 import Container from "@mui/material/Container";
-import Header from "../components/RightBox/Header";
-import ProgressBar from "../components/RightBox/ProgressBar";
-import Claim from "../components/RightBox/Claim";
+import Header from "../components/rightBox/Header";
+import ProgressBar from "../components/rightBox/ProgressBar";
+import Claim from "../components/rightBox/Claim";
+import { Route , Routes } from "react-router-dom";
+import Kyc from "../components/CommonPages/Kyc";
+import Parties from "../components/CommonPages/Parties";
+import Payment from "../components/CommonPages/Payment";
+import Review from "../components/CommonPages/Review";
+import YourDetails from "../components/CommonPages/YourDetails";
+import Preliminary from "../components/CommonPages/Preliminary";
 
 const RightContainer = ({ toggleDrawer }) => {
   return (
@@ -15,8 +22,18 @@ const RightContainer = ({ toggleDrawer }) => {
       }}
     >
       <Header toggleDrawer={toggleDrawer} />
+
       <ProgressBar currentStep={3} />
-      <Claim />
+
+      <Routes>
+        <Route path="/" element={<Claim/>}></Route>        
+        <Route path="/preliminary" element={<Preliminary/>}></Route>
+        <Route path="/kyc" element={<Kyc/>}></Route>
+        <Route path="/parties" element={<Parties/>}></Route>
+        <Route path="/payment" element={<Payment/>}></Route>
+        <Route path="/review" element={<Review/>}></Route>
+        <Route path="/yourdetails" element={<YourDetails/>}></Route>
+      </Routes>
     </Container>
   );
 };
