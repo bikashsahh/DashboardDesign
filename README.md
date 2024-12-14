@@ -54,7 +54,8 @@ This project is a dynamic, responsive dashboard that tracks progress through mul
 ![Tablet View](./Dashboard/public/tablet_view.png)
 
 ## Mobile View
-![Mobile View](./Dashboard/public/mobile_view.png)
+<img src="./Dashboard/public/mobile_view.png" alt="Mobile View" width="300" />
+
 
 
 ## Installation
