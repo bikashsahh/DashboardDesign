@@ -50,7 +50,17 @@ const Sidebar = () => {
           justifyContent: 'space-between'
         }}
       >
-       
+       <Box
+          component="img"
+          src="/jur.png"
+          // alt="Justice Illustration"
+          sx={{
+            width: '60%',
+            marginTop: -2,
+            marginLeft : 5,
+            borderRadius: '5%'
+          }}
+        />
         {isMobile && (
           <IconButton
             edge="end"
@@ -58,7 +68,7 @@ const Sidebar = () => {
             onClick={handleDrawerToggle}
             sx={{ color: '#000000' }}
           >
-            <CloseIcon />
+            {/* <CloseIcon /> */}
           </IconButton>
         )}
       </Box>
@@ -91,7 +101,7 @@ const Sidebar = () => {
       <Box
         sx={{
           padding: 2,
-          marginTop: 'auto',
+          marginTop: '5',
           textAlign: 'center'
         }}
       >
