@@ -48,13 +48,13 @@ This project is a dynamic, responsive dashboard that tracks progress through mul
 # My Dashboard Views
 
 ## Desktop View
-![Desktop View](/desktop_view.png)
+![Desktop View](./Dashboard/public/desktop_view.png)
 
 ## Tablet View
-![Tablet View](/tablet_view.png)
+![Tablet View](./Dashboard/public/tablet_view.png)
 
 ## Mobile View
-![Mobile View](/mobile_view.png)
+![Mobile View](./Dashboard/public/mobile_view.png)
 
 
 ## Installation
